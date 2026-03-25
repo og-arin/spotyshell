@@ -10,7 +10,7 @@ from telegram.ext import Application, CommandHandler, MessageHandler, filters, C
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
 # --- CONFIGURATION ---
-TOKEN = '8526939381:AAFBu6RtSY8o492DA-gv8SBK8-ZffLuUijE'
+TOKEN = 'DO_NOT_SHARE_TOKEN'
 BASE_DOWNLOAD_PATH = "./spotyshell_temp"
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
