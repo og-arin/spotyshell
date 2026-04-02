@@ -13,14 +13,23 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 TOKEN = 'DO_NOT_SHARE_TOKEN'
 BASE_DOWNLOAD_PATH = "./spotyshell_temp"
 
+# --- Place this with your other command functions ---
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    # Use your actual Razorpay link here
+    support_url = "https://rzp.io/l/your_link"
+    
+    keyboard = [
+        [
+            InlineKeyboardButton("🎵 Enjoy Music", callback_data="enjoy_music"),
+            InlineKeyboardButton("❤️ Support Me", url=support_url)
+        ]
+    ]
+    reply_markup = InlineKeyboardMarkup(keyboard)
+    
     await update.message.reply_text(
-        "*SpotyShell :*\n\n"
-        "1. Send Spotify Link (Playlist/Track)\n"
-        "2. Send YouTube Link\n"
-        "3. Send Song Name (Direct Search)\n\n"
-        "Priority: Spotify Meta > YT-Music > YT-Video", 
-        parse_mode='Markdown'
+        "Welcome to SpotyShell! 🚀\n\n"
+        "Click the buttons below to start listening or support the project.",
+        reply_markup=reply_markup
     )
 
 async def download_worker(update: Update, chat_id: int, query: str):
