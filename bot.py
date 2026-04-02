@@ -4,7 +4,7 @@ import uuid
 import shutil
 import logging
 from telegram import Update
-from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
+from telegram.ext import InlineKeyboardMarkup, InlineKeyboardButton, Application, CommandHandler, MessageHandler, filters, ContextTypes
 
 # --- LOGGING ---
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
