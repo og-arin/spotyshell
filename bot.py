@@ -118,3 +118,5 @@ if __name__ == '__main__':
     
     print(">>> SpotyShell is live...")
     app.run_polling()
+# --- Inside your main() function or where handlers are added ---
+application.add_handler(CommandHandler("start", start))
