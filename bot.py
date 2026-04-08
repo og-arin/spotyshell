@@ -26,7 +26,7 @@ BASE_DOWNLOAD_PATH = "./spotyshell_temp"
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # Apna actual Razorpay link yahan daalna
-    support_url = "https://rzp.io/l/your_actual_link"
+    #support_url = "https://rzp.io/l/your_actual_link"
     
     keyboard = [
         [
